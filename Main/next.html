@@ -3,37 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próxima Página</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Cinzel', serif;
-      background: #080604;
-      color: #f0d080;
-    }
-    .content {
-      text-align: center;
-    }
-    a {
-      display: inline-block;
-      margin-top: 24px;
-      color: #c8943a;
-      text-decoration: none;
-      border: 1px solid #c8943a;
-      padding: 10px 22px;
-      border-radius: 999px;
-    }
-  </style>
+  <title>Nome do Personagem</title>
+  <link rel="stylesheet" href="next.css">
 </head>
 <body>
-  <div class="content">
-    <h1>Bem-vindo à próxima página</h1>
-    <p>O botão já foi clicado e a transição foi executada.</p>
-    <a href="index.html">Voltar</a>
+  <div class="page">
+    <div class="top-bar">
+      <div class="search">
+        <input type="text" placeholder="Buscar personagem...">
+        <button>Procurar</button>
+      </div>
+      <button class="top-action">Salvar</button>
+    </div>
+
+    <div class="avatar"></div>
+
+    <div class="options">
+      <div class="option-item">
+        <span>Nome do Personagem</span>
+        <button>Editar</button>
+      </div>
+      <div class="option-item">
+        <span>Classe / Nível</span>
+        <button>Editar</button>
+      </div>
+      <div class="option-item">
+        <span>História</span>
+        <button>Editar</button>
+      </div>
+      <div class="option-item">
+        <span>Itens</span>
+        <button>Editar</button>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="card">
+        <h2>Detalhes</h2>
+        <p>Veja aqui as informações rápidas sobre seu herói, como raça, alinhamento e pontos.</p>
+      </div>
+      <div class="card">
+        <h2>Status</h2>
+        <p>As estatísticas principais aparecem nesse painel, tornando fácil acompanhar o progresso.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
