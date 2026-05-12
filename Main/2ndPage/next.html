@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Personagem</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="image-box" onclick="document.getElementById('fileInput').click()">
+      <span>Escolher imagem</span>
+      <img id="preview">
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*">
+
+    <div class="catalog">
+      <img src="https://i.pravatar.cc/150?img=1">
+      <img src="https://i.pravatar.cc/150?img=2">
+      <img src="https://i.pravatar.cc/150?img=3">
+      <img src="https://i.pravatar.cc/150?img=4">
+    </div>
+
+    <input type="text" placeholder="Nome">
+
+    <input type="number" placeholder="Idade">
+
+    <select>
+      <option>Sexo</option>
+      <option>Masculino</option>
+      <option>Feminino</option>
+      <option>Outro</option>
+    </select>
+
+    <button>Salvar</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
