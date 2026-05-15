@@ -157,7 +157,7 @@ function generateAIStory() {
         if (i < epicStory.length) {
             textarea.value += epicStory.charAt(i);
             i++;
-            setTimeout(typeWriter, 30); // Velocidade da digitação
+            setTimeout(typeWriter,1); // Velocidade da digitação
         } else {
             btn.innerHTML = "✨ Generate AI Story";
             btn.disabled = false;
@@ -199,7 +199,7 @@ function calculateVitals() {
     // Base HP por classe (Simplificado)
     let baseHp = 8;
     if(character.class === "Barbarian") baseHp = 12;
-    if(character.class === "Fighter" || character.class === "Paladin" || character.class === "Ranger") baseHp = 10;
+    if(character.class === "Fighter" || character.class === "Paladin" || character.class === "Ranger") baseHp = 8;
     if(character.class === "Wizard" || character.class === "Sorcerer") baseHp = 6;
 
     character.hp = baseHp + conMod;
@@ -233,20 +233,6 @@ function generateFinal() {
     `;
 }
 
-// --- FORGE CHARACTER SHEET (PDF PRINT) --- //
-function forgePDF() {
-    /* 
-       NOTA TÉCNICA: Sem o uso de frameworks (como pdf-lib ou jsPDF), o Javascript puro rodando no lado do cliente 
-       NÃO PODE editar arquivos .pdf brutos do sistema operacional do usuário por razões estritas de segurança do navegador.
-       
-       A solução AAA oficial para aplicações Web Vanilla é usar a interface de Impressão do navegador formatada com CSS.
-       O usuário clica no botão, a tela muda para um layout branco oficial (configurado no @media print no CSS),
-       e a janela de impressão se abre, permitindo "Salvar como PDF".
-    */
-    alert("Iniciando encantamento de forja! Selecione 'Salvar como PDF' na janela que se abrirá.");
-    window.print();
-}
-
 // --- EFEITOS VISUAIS: PARTÍCULAS --- //
 function initParticles() {
     const container = document.getElementById("particle-container");
@@ -269,4 +255,17 @@ function initParticles() {
             particle.remove();
         }, 6000);
     }, 200); // Cria uma partícula a cada 200ms
+}
+// --- FORGE CHARACTER SHEET (PDF PRINT) --- //
+function forgePDF() {
+    /* 
+       NOTA TÉCNICA: Sem o uso de frameworks (como pdf-lib ou jsPDF), o Javascript puro rodando no lado do cliente 
+       NÃO PODE editar arquivos .pdf brutos do sistema operacional do usuário por razões estritas de segurança do navegador.
+       
+       A solução AAA oficial para aplicações Web Vanilla é usar a interface de Impressão do navegador formatada com CSS.
+       O usuário clica no botão, a tela muda para um layout branco oficial (configurado no @media print no CSS),
+       e a janela de impressão se abre, permitindo "Salvar como PDF".
+    */
+    alert("Iniciando encantamento de forja! Selecione 'Salvar como PDF' na janela que se abrirá.");
+    window.print();
 }

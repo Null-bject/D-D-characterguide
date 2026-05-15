@@ -17,91 +17,92 @@
         
         <!-- PÁGINA 1: PERSONAGEM -->
         <section class="page active" id="page-1">
-            <h1 class="title">Forge Your Hero</h1>
+            <h1 class="title">Construa o seu Herói</h1>
             <div class="form-group">
                 <div class="avatar-upload-container">
                     <div id="avatar-preview" class="avatar-preview">
-                        <span>Upload Avatar</span>
+                        <span>Importar Avatar</span>
                     </div>
                     <input type="file" id="avatar-upload" accept="image/*">
                 </div>
             </div>
             <div class="form-group">
-                <label for="char-name">Character Name</label>
-                <input type="text" id="char-name" placeholder="Enter your legend's name...">
+                <label for="char-name">Nome do seu personagem</label>
+                <input type="text" id="char-name" placeholder="Jaqueivius, o sábio...">
             </div>
             <div class="form-group">
-                <label for="char-gender">Gender</label>
+                <label for="char-gender">Gênero</label>
                 <select id="char-gender">
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Non-Binary">Non-Binary</option>
-                    <option value="Other">Other / Unknown</option>
+                    <option value="" disabled selected>Selecionar genero</option>
+                    <option value="Male">Homem</option>
+                    <option value="Female">Mulher</option>
+                    <option value="Non-Binary">Não-Binário</option>
+                    <option value="Other">Outro</option>
                 </select>
             </div>
-            <button class="btn-magic" onclick="nextPage(2)">Next: Lineage <span>&#10140;</span></button>
+            <button class="btn-magic" onclick="nextPage(2)">Próximo <span>&#10140;</span></button>
         </section>
 
         <!-- PÁGINA 2: RAÇAS -->
         <section class="page" id="page-2">
-            <h1 class="title">Choose Your Race</h1>
+            <h1 class="title">Escolha a sua raça</h1>
+            <h3>Clique nas interrogações para saber mais </h3>
             <div class="grid-container" id="race-grid">
                 <!-- Preenchido via JS -->
             </div>
             <div class="nav-buttons">
-                <button class="btn-magic btn-back" onclick="prevPage(1)"><span>&#10132;</span> Back</button>
-                <button class="btn-magic" onclick="nextPage(3)">Next: Class <span>&#10140;</span></button>
+                <button class="btn-magic btn-back" onclick="prevPage(1)"><span>&#10132;</span>Voltar</button>
+                <button class="btn-magic" onclick="nextPage(3)">Próximo<span>&#10140;</span></button>
             </div>
         </section>
 
         <!-- PÁGINA 3: CLASSES -->
         <section class="page" id="page-3">
-            <h1 class="title">Choose Your Class</h1>
+            <h1 class="title">Escolha sua classe</h1>
             <div class="grid-container" id="class-grid">
                 <!-- Preenchido via JS -->
             </div>
             <div class="nav-buttons">
-                <button class="btn-magic btn-back" onclick="prevPage(2)"><span>&#10132;</span> Back</button>
-                <button class="btn-magic" onclick="nextPage(4)">Next: Origin <span>&#10140;</span></button>
+                <button class="btn-magic btn-back" onclick="prevPage(2)"><span>&#10132;</span>Voltar</button>
+                <button class="btn-magic" onclick="nextPage(4)">Próximo<span>&#10140;</span></button>
             </div>
         </section>
 
         <!-- PÁGINA 4: ALIGNMENT & ORIGIN -->
         <section class="page" id="page-4">
-            <h1 class="title">Alignment & Origin</h1>
+            <h1 class="title">Alinhamento e origem</h1>
             <div class="form-group">
-                <label>Alignment</label>
+                <label>Alinhamento</label>
                 <div class="alignment-grid" id="alignment-grid">
                     <!-- Preenchido via JS -->
                 </div>
             </div>
             <div class="form-group">
-                <label for="char-origin">Origin / Background</label>
-                <input type="text" id="char-origin" placeholder="e.g., Acolyte, Criminal, Noble...">
+                <label for="char-origin">Origem</label>
+                <input type="text" id="char-origin" placeholder="ex: Cidade de luz, Floresta encantada, ...">
             </div>
             <div class="nav-buttons">
-                <button class="btn-magic btn-back" onclick="prevPage(3)"><span>&#10132;</span> Back</button>
-                <button class="btn-magic" onclick="nextPage(5)">Next: Story <span>&#10140;</span></button>
+                <button class="btn-magic btn-back" onclick="prevPage(3)"><span>&#10132;</span> Voltar</button>
+                <button class="btn-magic" onclick="nextPage(5)">Próximo<span>&#10140;</span></button>
             </div>
         </section>
 
         <!-- PÁGINA 5: CHARACTER STORY -->
         <section class="page" id="page-5">
-            <h1 class="title">Character Tale</h1>
+            <h1 class="title">A história do seu personagem</h1>
             <div class="story-container">
-                <textarea id="char-story" rows="10" placeholder="Write your epic tale here..."></textarea>
-                <button class="btn-ai" onclick="generateAIStory()">✨ Generate AI Story</button>
+                <textarea id="char-story" rows="10" placeholder="Escreva a sua história épica aqui..."></textarea>
+                <button class="btn-ai" onclick="generateAIStory()">✨ Gerar história com ajuda de IA</button>
             </div>
             <div class="nav-buttons">
-                <button class="btn-magic btn-back" onclick="prevPage(4)"><span>&#10132;</span> Back</button>
-                <button class="btn-magic" onclick="nextPage(6)">Next: Destiny <span>&#10140;</span></button>
+                <button class="btn-magic btn-back" onclick="prevPage(4)"><span>&#10132;</span> Voltar</button>
+                <button class="btn-magic" onclick="nextPage(6)">Próximo<span>&#10140;</span></button>
             </div>
         </section>
 
         <!-- PÁGINA 6: DICE ROLL (STATS) -->
         <section class="page" id="page-6">
-            <h1 class="title">Roll For Stats</h1>
+            <h1 class="title">Role os dados para os status</h1>
             <p class="subtitle" style="text-align: center; color: #aaa;">Roll the 3d6 / d20 to determine your fate.</p>
             
             <div class="dice-container" id="dice-container">
@@ -112,27 +113,27 @@
                 <div class="die" data-sides="12" onclick="rollDie(this, 12)">d12</div>
                 <div class="die d20" data-sides="20" onclick="rollDie(this, 20)">d20</div>
             </div>
-            <div id="dice-result" class="dice-result">Roll a die!</div>
+            <div id="dice-result" class="dice-result">\Role um dado!</div>
 
             <div class="stats-grid">
-                <div class="stat-box">STR <span id="stat-str">10</span></div>
-                <div class="stat-box">DEX <span id="stat-dex">10</span></div>
-                <div class="stat-box">CON <span id="stat-con">10</span></div>
-                <div class="stat-box">INT <span id="stat-int">10</span></div>
-                <div class="stat-box">WIS <span id="stat-wis">10</span></div>
-                <div class="stat-box">CHA <span id="stat-cha">10</span></div>
+                <div class="stat-box">STRENGTH/FORÇA <span id="stat-str">10</span></div>
+                <div class="stat-box">DEXTERITY/DEXTERIDADE <span id="stat-dex">10</span></div>
+                <div class="stat-box">CONSTITUCION/CONSTITUIÇÃO <span id="stat-con">10</span></div>
+                <div class="stat-box">INTELIGENCE/INTELIGÊNCIA <span id="stat-int">10</span></div>
+                <div class="stat-box">WISDOM/SABEDORIA<span id="stat-wis">10</span></div>
+                <div class="stat-box">CHARISMA/CARISMA <span id="stat-cha">10</span></div>
             </div>
-            <button class="btn-magic" style="width:100%; margin-top:20px;" onclick="autoRollStats()">Auto-Roll All Stats</button>
+            <button class="btn-magic" style="width:100%; margin-top:20px;" onclick="autoRollStats()">Auto-rolar os dados</button>
 
             <div class="nav-buttons">
-                <button class="btn-magic btn-back" onclick="prevPage(5)"><span>&#10132;</span> Back</button>
-                <button class="btn-magic" onclick="nextPage(7)">Next: Combat <span>&#10140;</span></button>
+                <button class="btn-magic btn-back" onclick="prevPage(5)"><span>&#10132;</span> Voltar</button>
+                <button class="btn-magic" onclick="nextPage(7)">Próximo<span>&#10140;</span></button>
             </div>
         </section>
 
         <!-- PÁGINA 7: HP & ARMOR CLASS -->
         <section class="page" id="page-7">
-            <h1 class="title">Combat Vitals</h1>
+            <h1 class="title">Vitais de combate</h1>
             <div class="vitals-container">
                 <div class="vital-card" onclick="openModal('Hit Points (HP)', 'No D&D, HP representa sua força vital. Quando chega a zero, você cai inconsciente. O HP é calculado pelo Dado de Vida da sua classe + Modificador de Constituição.')">
                     <h3>Hit Points (HP) <span class="info-icon">?</span></h3>
@@ -143,7 +144,7 @@
                     <div class="vital-value" id="calc-ac">10</div>
                 </div>
             </div>
-            <button class="btn-magic" style="width:100%; margin-top:20px;" onclick="calculateVitals()">Calculate Vitals</button>
+            <button class="btn-magic" style="width:100%; margin-top:20px;" onclick="calculateVitals()">Calcular pontos vitais</button>
 
             <div class="nav-buttons">
                 <button class="btn-magic btn-back" onclick="prevPage(6)"><span>&#10132;</span> Back</button>
